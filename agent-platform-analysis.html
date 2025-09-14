@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Platform Analysis - Finance Sector</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .slide {
+            display: none;
+            padding: 60px 80px;
+            height: 100vh;
+            background: white;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 2em;
+            margin-bottom: 25px;
+            border-left: 5px solid #3498db;
+            padding-left: 20px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin: 20px 0 15px 0;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .platform-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .platform-card h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .rating {
+            font-weight: bold;
+        }
+
+        .rating.high {
+            color: #27ae60;
+        }
+
+        .rating.medium {
+            color: #f39c12;
+        }
+
+        .rating.low {
+            color: #e74c3c;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #2980b9;
+        }
+
+        .nav-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .executive-summary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .strengths {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .weaknesses {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .intro-slide {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .author-info {
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Slide 1: Title -->
+        <div class="slide active intro-slide">
+            <h1>Agent Platform Analysis for Finance Sector</h1>
+            <h2>Evaluating AWS Bedrock Agents, LangGraph, and CrewAI</h2>
+            <div class="author-info">
+                <p><strong>Analyst:</strong> Annabella Gong</p>
+                <p><strong>Date:</strong> September 2025</p>
+                <p><strong>Focus:</strong> Financial Services Applications</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Executive Summary -->
+        <div class="slide">
+            <h1>Executive Summary</h1>
+            <div class="executive-summary">
+                <h3>Key Findings</h3>
+                <ul>
+                    <li><strong>Market Growth:</strong> Agent market in financial services expected to grow 815% between 2025-2030</li>
+                    <li><strong>Enterprise Adoption:</strong> 88% of financial leaders agree they need faster innovation to compete</li>
+                    <li><strong>Implementation Focus:</strong> Start with narrow, high-impact use cases like fraud detection and loan automation</li>
+                </ul>
+            </div>
+
+            <h3>Recommendation</h3>
+            <p><strong>AWS Bedrock Agents</strong> emerges as the top choice for enterprise financial institutions requiring:</p>
+            <ul>
+                <li>Enterprise-grade security and compliance</li>
+                <li>Scalable multi-agent collaboration</li>
+                <li>Integration with existing AWS infrastructure</li>
+                <li>Proven track record in financial services</li>
+            </ul>
+
+            <p><strong>Alternative recommendations:</strong> LangGraph for custom implementations with technical teams, CrewAI for rapid prototyping and smaller-scale deployments.</p>
+        </div>
+
+        <!-- Slide 3: AWS Bedrock Agents Overview -->
+        <div class="slide">
+            <h1>AWS Bedrock Agents</h1>
+            <div class="platform-card">
+                <h3>Overview</h3>
+                <p>Enterprise-grade multi-agent platform with deep AWS integration and financial services focus.</p>
+
+                <h3 class="strengths">Strengths</h3>
+                <ul>
+                    <li><strong>Enterprise Security:</strong> Built-in compliance and encryption for regulated environments</li>
+                    <li><strong>Multi-Agent Collaboration:</strong> Advanced orchestration and task delegation</li>
+                    <li><strong>AWS Integration:</strong> Seamless integration with AWS ecosystem</li>
+                    <li><strong>AgentCore (2025):</strong> Enhanced tools, sandbox environments, and browser capabilities</li>
+                    <li><strong>Financial Partnerships:</strong> Proven success with institutions like Itaú Bank</li>
+                </ul>
+
+                <h3 class="weaknesses">Weaknesses</h3>
+                <ul>
+                    <li>Higher complexity for setup and configuration</li>
+                    <li>Vendor lock-in to AWS ecosystem</li>
+                    <li>Premium pricing model (free until Sept 2025)</li>
+                </ul>
+
+                <h3>Financial Use Cases</h3>
+                <ul>
+                    <li><strong>Investment Research:</strong> Multi-agent systems for market analysis and portfolio optimization</li>
+                    <li><strong>Risk Management:</strong> Real-time fraud detection and compliance monitoring</li>
+                    <li><strong>Banking Operations:</strong> Customer service automation and transaction processing</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 4: LangGraph Overview -->
+        <div class="slide">
+            <h1>LangGraph</h1>
+            <div class="platform-card">
+                <h3>Overview</h3>
+                <p>Open-source framework for building complex multi-agent workflows with graph-based architecture.</p>
+
+                <h3 class="strengths">Strengths</h3>
+                <ul>
+                    <li><strong>Flexibility:</strong> Open-source with extensive customization options</li>
+                    <li><strong>Workflow Orchestration:</strong> Graph-based architecture for complex workflows</li>
+                    <li><strong>Production Success:</strong> Proven at scale (Klarna: 85M users, 80% faster resolution)</li>
+                    <li><strong>Technical Control:</strong> Custom cognitive architectures for financial analysis</li>
+                </ul>
+
+                <h3 class="weaknesses">Weaknesses</h3>
+                <ul>
+                    <li>Requires significant technical expertise</li>
+                    <li>Limited enterprise support compared to cloud providers</li>
+                    <li>Security and compliance must be built separately</li>
+                </ul>
+
+                <h3>Financial Use Cases</h3>
+                <ul>
+                    <li><strong>Document Processing:</strong> Financial document Q&A systems</li>
+                    <li><strong>Trend Analysis:</strong> Multi-year trend synthesis from structured filings</li>
+                    <li><strong>Compliance:</strong> Workflow automation for regulated sectors</li>
+                    <li><strong>Analysis Workflows:</strong> Complex financial analysis and reporting</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 5: CrewAI Overview -->
+        <div class="slide">
+            <h1>CrewAI</h1>
+            <div class="platform-card">
+                <h3>Overview</h3>
+                <p>Multi-agent framework focused on role-based collaboration and rapid deployment.</p>
+
+                <h3 class="strengths">Strengths</h3>
+                <ul>
+                    <li><strong>Ease of Use:</strong> Intuitive multi-agent coordination</li>
+                    <li><strong>Rapid Development:</strong> Quick deployment and prototyping</li>
+                    <li><strong>Role Specialization:</strong> Clear agent roles (analysts, processors, auditors)</li>
+                    <li><strong>Growing Ecosystem:</strong> Active community and development</li>
+                </ul>
+
+                <h3 class="weaknesses">Weaknesses</h3>
+                <ul>
+                    <li>Less enterprise-grade security features</li>
+                    <li>Smaller scale compared to AWS or established frameworks</li>
+                    <li>Limited integration options with enterprise systems</li>
+                </ul>
+
+                <h3>Financial Use Cases</h3>
+                <ul>
+                    <li><strong>Document Processing:</strong> AML/KYC automation and digitization</li>
+                    <li><strong>Investment Research:</strong> Stock analysis and market data processing</li>
+                    <li><strong>Credit Management:</strong> Fraud detection and risk modeling</li>
+                    <li><strong>Real-time Monitoring:</strong> Transaction stream analysis</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 6: Detailed Comparison -->
+        <div class="slide">
+            <h1>Platform Comparison Matrix</h1>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>AWS Bedrock Agents</th>
+                        <th>LangGraph</th>
+                        <th>CrewAI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Ease of Use</strong></td>
+                        <td class="rating medium">Medium</td>
+                        <td class="rating medium">Low-Medium</td>
+                        <td class="rating high">High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cost</strong></td>
+                        <td class="rating low">High</td>
+                        <td class="rating high">Low</td>
+                        <td class="rating medium">Medium</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scalability</strong></td>
+                        <td class="rating high">Very High</td>
+                        <td class="rating high">Medium-High</td>
+                        <td class="rating medium">Medium</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Finance Impact</strong></td>
+                        <td class="rating high">Very High</td>
+                        <td class="rating high">High</td>
+                        <td class="rating high">Medium-High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Security & Compliance</strong></td>
+                        <td class="rating high">Excellent</td>
+                        <td class="rating medium">Custom Build</td>
+                        <td class="rating medium">Basic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Enterprise Support</strong></td>
+                        <td class="rating high">Full AWS Support</td>
+                        <td class="rating medium">Community</td>
+                        <td class="rating medium">Growing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integration</strong></td>
+                        <td class="rating high">AWS Ecosystem</td>
+                        <td class="rating high">Custom/Flexible</td>
+                        <td class="rating medium">Limited</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Key Differentiators</h3>
+            <ul>
+                <li><strong>AWS Bedrock:</strong> Enterprise-ready with financial sector partnerships</li>
+                <li><strong>LangGraph:</strong> Technical flexibility with proven production success</li>
+                <li><strong>CrewAI:</strong> Rapid deployment with intuitive role-based architecture</li>
+            </ul>
+        </div>
+
+        <!-- Slide 7: Financial Sector Analysis -->
+        <div class="slide">
+            <h1>Financial Sector Impact Analysis</h1>
+
+            <h2>Use Case Breakdown by Platform</h2>
+
+            <h3>High-Impact Financial Applications</h3>
+            <div class="platform-card">
+                <h4>Fraud Detection & Risk Management</h4>
+                <ul>
+                    <li><strong>AWS Bedrock:</strong> Real-time monitoring with enterprise security</li>
+                    <li><strong>LangGraph:</strong> Custom cognitive architectures for complex risk models</li>
+                    <li><strong>CrewAI:</strong> 100K+ alert processing in seconds</li>
+                </ul>
+
+                <h4>Investment Research & Analysis</h4>
+                <ul>
+                    <li><strong>AWS Bedrock:</strong> Multi-agent collaboration for portfolio optimization</li>
+                    <li><strong>LangGraph:</strong> Document synthesis and trend analysis</li>
+                    <li><strong>CrewAI:</strong> Automated market data analysis and stock research</li>
+                </ul>
+
+                <h4>Compliance & Regulatory</h4>
+                <ul>
+                    <li><strong>AWS Bedrock:</strong> Built-in compliance for regulated environments</li>
+                    <li><strong>LangGraph:</strong> Workflow automation for compliance processes</li>
+                    <li><strong>CrewAI:</strong> AML/KYC automation and document processing</li>
+                </ul>
+            </div>
+
+            <h3>Implementation Timeline</h3>
+            <ul>
+                <li><strong>Quick Wins (1-3 months):</strong> CrewAI for fraud monitoring pilots</li>
+                <li><strong>Medium Term (3-9 months):</strong> LangGraph for custom analysis workflows</li>
+                <li><strong>Enterprise Scale (6-18 months):</strong> AWS Bedrock for comprehensive agent ecosystems</li>
+            </ul>
+        </div>
+
+        <!-- Slide 8: Recommendations -->
+        <div class="slide">
+            <h1>Strategic Recommendations</h1>
+
+            <div class="executive-summary">
+                <h2>Primary Recommendation: AWS Bedrock Agents</h2>
+                <p><strong>Best for:</strong> Large financial institutions with existing AWS infrastructure</p>
+
+                <h3>Why AWS Bedrock Agents?</h3>
+                <ul>
+                    <li><strong>Regulatory Compliance:</strong> Built-in security and compliance features essential for finance</li>
+                    <li><strong>Proven Track Record:</strong> Active partnerships with major financial institutions</li>
+                    <li><strong>Scalability:</strong> Can handle enterprise-scale deployments</li>
+                    <li><strong>Future-Proof:</strong> Continuous innovation with AgentCore and multi-agent capabilities</li>
+                </ul>
+            </div>
+
+            <h2>Alternative Strategies</h2>
+
+            <div class="platform-card">
+                <h3>LangGraph - For Custom Solutions</h3>
+                <p><strong>Choose if:</strong> You have strong technical teams and need maximum customization</p>
+                <ul>
+                    <li>Complex, proprietary financial workflows</li>
+                    <li>Cost optimization requirements</li>
+                    <li>Integration with non-AWS infrastructure</li>
+                </ul>
+            </div>
+
+            <div class="platform-card">
+                <h3>CrewAI - For Rapid Prototyping</h3>
+                <p><strong>Choose if:</strong> You need quick deployment and proof-of-concept development</p>
+                <ul>
+                    <li>Small to medium-scale implementations</li>
+                    <li>Fast time-to-market requirements</li>
+                    <li>Limited technical resources</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 9: Implementation Roadmap -->
+        <div class="slide">
+            <h1>Implementation Roadmap</h1>
+
+            <h2>Phase 1: Pilot Implementation (Months 1-3)</h2>
+            <ul>
+                <li><strong>Start Small:</strong> Choose one high-impact use case (fraud detection recommended)</li>
+                <li><strong>Platform Selection:</strong> Begin with AWS Bedrock Agents for enterprise readiness</li>
+                <li><strong>Team Building:</strong> Establish cross-functional teams (IT, Risk, Compliance)</li>
+                <li><strong>Success Metrics:</strong> Define clear KPIs and ROI measurements</li>
+            </ul>
+
+            <h2>Phase 2: Scale and Optimize (Months 4-9)</h2>
+            <ul>
+                <li><strong>Expand Use Cases:</strong> Add investment research and compliance workflows</li>
+                <li><strong>Integration:</strong> Connect with existing financial systems and data sources</li>
+                <li><strong>Performance Tuning:</strong> Optimize agent performance and accuracy</li>
+                <li><strong>Change Management:</strong> Train staff and establish governance procedures</li>
+            </ul>
+
+            <h2>Phase 3: Enterprise Deployment (Months 10-18)</h2>
+            <ul>
+                <li><strong>Full-Scale Rollout:</strong> Deploy across multiple business units</li>
+                <li><strong>Advanced Features:</strong> Implement multi-agent collaboration scenarios</li>
+                <li><strong>Continuous Improvement:</strong> Establish feedback loops and model updates</li>
+                <li><strong>Strategic Expansion:</strong> Explore customer-facing applications</li>
+            </ul>
+
+            <h3>Risk Mitigation</h3>
+            <ul>
+                <li>Start with employee-facing use cases before client-facing</li>
+                <li>Maintain human oversight for critical financial decisions</li>
+                <li>Establish robust monitoring and audit trails</li>
+                <li>Plan for regulatory compliance from day one</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">9</span>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prev-btn" onclick="changeSlide(-1)">← Previous</button>
+        <button class="nav-btn" id="next-btn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        document.getElementById('total-slides').textContent = totalSlides;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+            document.getElementById('prev-btn').disabled = currentSlide === 0;
+            document.getElementById('next-btn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(direction) {
+            if (direction === 1 && currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            } else if (direction === -1 && currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            }
+        });
+
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>
